@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" style="margin-left:15px">New Recipe</button>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-xs-12 " style="margin-bottom:3%" *ngFor="let recipe of recipes">
+    
+    <div  class="col-sm-3" >
+
+        <div class="card" style="width: 12rem; ">
+            <img class="card-img-top img-responsive" width="190" height="190" src="" alt="{{recipe.name}}" [src]="recipe.imagePath">
+            <div class="card-body">
+              <h5 class="card-title">{{recipe.name}}</h5>
+              <p class="card-text">{{recipe.discription}}</p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Show Details</a>
+            </div>
+          </div>
+          
+    </div>
+    <!-- <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="list-group-item-text">{{recipe.discription}}</p>
+      </div>
+      <span class="rounded float-right">
+        <img src="" alt="{{recipe.name}}" [src]="recipe.imagePath" class="img-responsive" style="max-height:50px;">
+      </span>
+    </a> -->
+    
+  </div>
+ 
+</div>
+<div class="row">
+  <div class="col-xs-12" style="margin-left: 20px;">
+
+      <app-recipe-item></app-recipe-item>
+  </div>
+   
+</div>
